@@ -4,14 +4,27 @@
   TWO COLUMN LAYOUT
   *************************/
   
-  #primary {
+  .millie {
     width: 50%;
     float: left;
   }
   
-  #secondary {
-   width: 40%;
+  .kayleigh {
+   width: 50%;
    float: right;
   }
-
-  
+    
+  body {
+    height: 100%;   
+    }
+    
+  header {
+    font-size: 2em;    
+    }
+    
+.millie,
+.kayleigh {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    }

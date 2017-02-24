@@ -1,0 +1,59 @@
+h1 {
+    text-align: center;
+    font-family: 'Sigmar One', cursive;
+    font-size: 3em;
+    text-decoration: underline;
+}
+
+.millie,
+.kayleigh {
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.5em;
+}
+
+header {
+    background-color: rgb(181, 9, 95);
+    margin-top: 0;
+}
+
+ .icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+}
+
+.icon1 {
+   color: rgb(87, 87, 255); 
+}
+
+.icon2 {
+    color: rgb(80, 200, 87);
+}
+
+.icon3 {
+    color: rgb(244, 238, 66);
+}
+
+.innerIcon {
+    color: rgb(181, 9, 95);
+}
+
+a,
+a:hover,
+a:visited {
+    text-decoration: none;
+    color: rgb(50, 150, 255);
+}
+
+.milliePic,
+.kayleighPic {
+    width: 8em;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin: 1em;
+}
+
+body {
+    background-color: rgb(77, 77, 77)
+}

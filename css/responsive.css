@@ -1,0 +1,30 @@
+@media screen and (min-width: 480px) {
+ 
+  /*************************
+  TWO COLUMN LAYOUT
+  *************************/
+  
+  .millie {
+    width: 50%;
+    float: left;
+  }
+  
+  .kayleigh {
+   width: 50%;
+   float: right;
+  }
+    
+  body {
+    height: 100%;   
+    }
+    
+  header {
+    font-size: 2em;    
+    }
+    
+.millie,
+.kayleigh {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    }

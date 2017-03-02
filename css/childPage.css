@@ -1,0 +1,11 @@
+ul {
+    list-style: none;
+}
+
+.ameliaChecklist {
+    display: flex;
+    justify-content: center;
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.75em;
+    color: rgb(100, 10, 125);
+}

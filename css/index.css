@@ -1,15 +1,47 @@
 h1 {
-    text-align: center;
+    display: flex;
+    justify-content: center;
     font-family: 'Sigmar One', cursive;
     font-size: 3em;
     text-decoration: underline;
+    color: rgb(75, 5, 75);
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    text-shadow: 1px 2px 3px black;
 }
 
 .millie,
 .kayleigh {
     font-family: 'Indie Flower', cursive;
-    font-size: 1.5em;
+    font-size: 1.75em;
 }
+
+.dateAndTime {
+    padding-top: -2em;
+    margin-top: -1em;
+}
+.dateAndTime p {
+    margin-bottom: 0;    
+}
+
+.currentTime,
+.currentDate {
+    font-family: 'Sigmar One', cursive;
+    color: rgb(100, 10, 125);
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.currentTime > p {
+    margin-top: 0;
+} 
+
 
 header {
     background-color: rgb(181, 9, 95);
@@ -21,39 +53,52 @@ header {
     justify-content: center;
     align-items: center;
     margin-top: 0;
+    padding-bottom: .5em;
 }
 
 .icon1 {
-   color: rgb(87, 87, 255); 
+   color: rgb(170, 87, 175); 
 }
 
 .icon2 {
-    color: rgb(80, 200, 87);
+    color: rgb(100, 10, 125);
 }
 
 .icon3 {
-    color: rgb(244, 238, 66);
+    color: rgb(235, 100, 240);
 }
 
 .innerIcon {
     color: rgb(181, 9, 95);
 }
 
+i.fa,
+span.fa-stack {
+  text-shadow: 1px 2px 3px black;
+}
+
+.rotateInDownRight,
+.rollIn {
+    animation-delay: 1s;
+}
+
 a,
 a:hover,
 a:visited {
     text-decoration: none;
-    color: rgb(50, 150, 255);
+    color: rgb(100, 10, 125);
 }
 
 .milliePic,
 .kayleighPic {
-    width: 8em;
+    width: 7em;
     border-radius: 50%;
     vertical-align: middle;
     margin: 1em;
-}
+    transition: box-shadow 250ms ease-in-out;
+    box-shadow: 1px 2px 3px black;
+    }
 
 body {
-    background-color: rgb(77, 77, 77)
+    background-color: rgb(235, 100, 240)
 }

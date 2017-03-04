@@ -1,29 +1,29 @@
 var weekdayChecklistForAmelia = [
-  ' Eat Breakfast'
-  , ' Put Dishes in the Sink'
-  , ' Brush Teeth'
-  , ' Get Dressed'
-  , ' Clean up Toys'
-  , ' Help Clean the Table After Dinner'
-  , ' Clean Room'
-  , ' Take a Bath'
-  , ' Brush Teeth'
-  , ' Put on Pajamas'
-  , ' Get Ready for Bed'
+  {taskName: 'Eat Breakfast', taskValue: 6}
+  , {taskName: 'Put Dishes in the Sink', taskValue: 10}
+  , {taskName: 'Brush Teeth', taskValue: 10}
+  , {taskName: 'Get Dressed', taskValue: 10}
+  , {taskName: 'Clean up Toys', taskValue: 10}
+  , {taskName: 'Help Clean the Table After Dinner', taskValue: 10}
+  , {taskName: 'Clean Room', taskValue: 10}
+  , {taskName: 'Take a Bath', taskValue: 10}
+  , {taskName: 'Brush Teeth', taskValue: 10}
+  , {taskName: 'Put on Pajamas', taskValue: 10}
+  , {taskName: 'Get Ready for Bed', taskValue: 10}
 ];
 
 var weekendChecklistForAmelia = [
-  ' Help Put Away Breakfast Dishes'
-  , ' Brush Teeth'
-  , ' Get Dressed'
-  , ' Help Clean Bathroom'
-  , ' Help Clean Living Room'
-  , ' Put Away Any Toys That Are Out'
-  , ' Help Clear the Table'
-  , ' Take a Bath'
-  , ' Brush Teeth'
-  , ' Put on Pajamas'
-  , ' Get Ready for Bed'
+  {taskName: 'Help Put Away Breakfast Dishes', taskValue: 10}
+  , {taskName: 'Brush Teeth', taskValue: 10}
+  , {taskName: 'Get Dressed', taskValue: 10}
+  , {taskName: 'Help Clean Bathroom', taskValue: 10}
+  , {taskName: 'Help Clean Living Room', taskValue: 10}
+  , {taskName: 'Put Away Any Toys That Are Out', taskValue: 10}
+  , {taskName: 'Help Clear the Table', taskValue: 10}
+  , {taskName: 'Take a Bath', taskValue: 10}
+  , {taskName: 'Brush Teeth', taskValue: 10}
+  , {taskName: 'Put on Pajamas', taskValue: 10}
+  , {taskName: 'Get Ready for Bed', taskValue: 10}
 ];
 
 /**
@@ -33,12 +33,16 @@ var weekendChecklistForAmelia = [
 function printChecklist($spotToPutIt, listOfThings) {
   var listHTML = '<ul>';
   for (var i = 0; i <= listOfThings.length - 1; i++) {
-    listHTML += '<li>' + listOfThings[i] + '</li>';
+    listHTML += buildListItem(listOfThings[i]);
   }
   listHTML += '</ul>';
   
   // You might have done this on accident but this is the exact right way
   $spotToPutIt.html(listHTML);
+}
+
+function buildListItem(item) {
+  return '<li><input type="checkbox" data-value="' + item.taskValue + '"/>' + item.taskName + ' (<small>' + item.taskValue + '</small>)' + '</li>'
 }
 
 /**
@@ -61,5 +65,23 @@ var currentDate             = new Date()
 printChecklist($ameliaChecklist, checklistItemsToDisplay);
 
 $(document).ready(function () {
-    $('<input type="checkbox" value="1" />').prependTo("li");
- });
+  let total = 0;
+  
+  $('li').on('click', function (e) {
+    $(e.currentTarget).find('input').click();
+  });
+  
+  $('li input').on('click', function (e) {
+    var $input    = $(e.currentTarget)
+      , isChecked = $input.prop('checked')
+      ;
+    
+    if (isChecked) {
+      total += $input.data('value')
+    } else {
+      total -= $input.data('value')
+    }
+    
+    $('.jsTotal').html(total)
+  });
+});

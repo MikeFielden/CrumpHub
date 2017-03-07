@@ -10,10 +10,22 @@ small {
     font-size: .8em;
 }
 
-.ameliaChecklist {
+.ameliaChecklist,
+.kayleighChecklist {
     display: flex;
     justify-content: center;
     font-family: 'Indie Flower', cursive;
     font-size: 1.75em;
     color: rgb(100, 10, 125);
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    font-family: 'Sigmar One', cursive;
+    text-decoration: underline;
+    color: rgb(75, 5, 75);
+    margin-top: .1em;
+    margin-bottom: .1em;
+    font-size: 2em;
 }
